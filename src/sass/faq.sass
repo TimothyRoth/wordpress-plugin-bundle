@@ -1,0 +1,59 @@
+.fab-faq-container
+  font-family: $font-family
+  color: $font-color
+  font-size: $font-size
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+  .single-faq
+    overflow: hidden
+    padding: 20px
+    box-shadow: $box-shadow
+    transition: .3s ease-in-out
+
+    &.active
+      transition: .3s ease-in-out
+      background: $primary_color
+
+      .faq-title
+        color: #fff
+
+        &:after
+          rotate: 45deg
+
+      .faq-content
+        transition: max-height .3s ease-in-out, opacity .3s ease-in-out
+        max-height: 1000px
+        opacity: 1
+        padding-top: 20px
+
+    .faq-title
+      position: relative
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin: 0
+      color: $primary_color
+
+      &:after
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: .3s ease-in-out
+        content: "+"
+        width: 20px
+        height: 20px
+
+  .faq-content
+    transition: .3s ease-in-out
+    max-height: 0
+    opacity: 0
+    color: #fff
+
+    p
+      margin: 0
+
+
+

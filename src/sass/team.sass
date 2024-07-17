@@ -1,0 +1,30 @@
+.fab-team-container
+  display: flex
+  flex-wrap: wrap
+  gap: 100px
+  @media screen and (min-width: 700px)
+    gap: 40px
+    margin-top: 150px
+  .single-member
+    box-shadow: $box-shadow-light
+    padding: 70px 20px 20px
+    background: #fff
+    width: 100%
+    position: relative
+    text-align: center
+    color: $font-color
+    transition: .3s ease-in-out
+    &:hover
+      transition: .3s ease-in-out
+      box-shadow: $box-shadow-deep
+    img
+      position: absolute
+      top: -40%
+      left: 50%
+      transform: translateX(-50%)
+      width: 150px
+      height: 150px
+      object-fit: cover
+      clip-path: circle()
+    @media screen and (min-width: 700px)
+      width: calc(33.33% - 67px)
